@@ -1,0 +1,207 @@
+/* RESETEO CCS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.menu{
+    list-style-type: none;
+}
+
+.menu li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    position: relative;
+ }   
+
+
+.submenu{
+    position: absolute;
+    display: none;
+}
+
+.submenu li{
+    display: block;
+    background-color: olive;
+}   
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+
+.parrafoAzul{
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px; 
+    text-align: center;
+    line-height: 2;
+    background-color: bisque;
+    margin: 50px 50px 20px 30px;
+    border: solid; 
+    
+
+}
+
+.texto1{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    padding: 0 50px;
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px; 
+    text-align: center;
+    line-height: 2;
+    background-color: bisque;
+    margin: 50px 50px 20px 30px;
+    border: solid; 
+
+}
+
+ 
+/* HOME */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr 0.05fr 1fr 0.1fr;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "menu menu menu"
+    "pres pres pres"
+    "footer footer footer";
+    justify-content: center;
+    align-content: space-between;
+}
+
+.tituloPrincipal{
+    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: wheat;
+    font-style: 'Oxygen', sans-serif;
+    font-weight: bold;
+    font-size: 35px; 
+    text-align:center;
+    line-height: 3;
+    background-color: orangered;
+    margin: 20px 3px;
+}
+
+.encabezado{
+    grid-area: menu;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: rap;
+   
+}
+
+.presentacion{ 
+    grid-area: pres;
+
+}
+
+.pie{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 0 50px;
+}
+
+.info {
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    padding: 0 50px;
+    flex-wrap: rap;
+}
+
+/* ****NOSOTROS***** */
+
+.textoHistoria{
+
+    color:chocolate;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px; 
+    text-align: center;
+    line-height: 2;
+    background-color: bisque;
+    margin: 50px 50px 20px 30px;
+    border: solid; 
+}
+
+/* PIE DE PAGINA */
+   .pie{
+
+    font-weight: bold;
+    font-size: 20px; 
+    text-align: right;
+    line-height: 3;
+    
+   }
+
+   /* CELULAR */
+@media screen and (max-width: 500px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "titulo"
+        "menu"
+        "pres"
+        "footer";
+    }
+    
+
+    .encabezado ul{
+        flex-wrap: rap;
+        flex-direction: column;
+    }
+
+    .presentacion{
+        flex-wrap: rap;
+        flex-direction: column;
+    }
+    .texto1{
+        flex-wrap: rap;
+        flex-direction: column;
+        
+    }
+
+    .pie{
+        flex-wrap: rap;
+        flex-direction: column;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .texto1{
+
+        color:green;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 20px; 
+        text-align: center;
+        line-height: 2;
+        background-color: bisque;
+        margin: 50px 50px 20px 30px;
+        border: solid; 
+    }
+    
+
+
+
+}
