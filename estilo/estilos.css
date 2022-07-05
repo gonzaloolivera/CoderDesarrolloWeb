@@ -111,6 +111,10 @@ html{
 .presentacion{ 
     grid-area: pres;
 
+    
+
+    
+
 }
 
 .pie{
@@ -127,7 +131,12 @@ html{
     align-items: center;
     padding: 0 50px;
     flex-wrap: rap;
+
+   
+
 }
+
+
 
 /* ****NOSOTROS***** */
 
@@ -143,6 +152,37 @@ html{
     margin: 50px 50px 20px 30px;
     border: solid; 
 }
+
+/* GALERIA */
+
+@keyframes animacion{
+    0%{
+    opacity: 100%;
+     }
+    25%{
+        opacity: 75%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 25%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+.seccionGaleria{
+
+    animation-name: animacion;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear ;
+
+}
+
 
 /* PIE DE PAGINA */
    .pie{
